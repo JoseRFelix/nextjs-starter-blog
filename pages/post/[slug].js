@@ -17,6 +17,7 @@ const MarkdownImage = ({ alt, src }) => (
     alt={alt}
     src={require(`../../content/assets/${src}`)}
     previewSrc={require(`../../content/assets/${src}?lqip`)}
+    className="w-full"
   />
 );
 
