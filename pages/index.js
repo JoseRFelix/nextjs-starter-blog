@@ -12,9 +12,7 @@ export default function Home({ posts }) {
           <header>
             <h3 className="mb-2">
               <Link href={"/post/[slug]"} as={`/post/${slug}`}>
-                <a className="text-3xl font-semibold text-orange-600 no-underline">
-                  {title}
-                </a>
+                <a className="text-3xl text-orange-600 no-underline">{title}</a>
               </Link>
             </h3>
             <span className="mb-4 text-xs">{date}</span>
