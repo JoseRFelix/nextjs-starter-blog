@@ -1,6 +1,7 @@
 {
-  "name": "next-blog-starter",
+  "name": "nextjs-blog-starter",
   "version": "0.1.0",
+  "description": "A Next.js template for a blog website.",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -30,5 +31,16 @@
     "gray-matter": "^4.0.2",
     "postcss-import": "^12.0.1",
     "tailwindcss": "^1.2.0"
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jfelix61/nextjs-starter-blog.git"
+  },
+  "homepage": "https://github.com/Jfelix61/nextjs-starter-blog#readme",
+  "keywords": [
+    "next.js",
+    "blog",
+    "template"
+  ]
 }
