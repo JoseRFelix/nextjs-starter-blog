@@ -1,6 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  Next.js blog starter
+</h1>
 
-## Getting Started
+Start off your writing journey with this Next.js markdown markdown blog template.
+
+## ✏ Features
+
+- Streamlined styling experience with [Tailwind.css](https://tailwindcss.com/)
+- Automatic preview and optimization for images with [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images)
+- 20+ themes with [Typography.js](https://github.com/cyrilwanner/next-optimized-images)
+- Markdown code highlighting with [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) and [PrismJs](https://prismjs.com/)
+
+## 🚀 Getting Started
 
 First, run the development server:
 
@@ -14,7 +25,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Learn More
+## 📖 Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -23,12 +34,15 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on ZEIT Now
+## ☑ Upcoming features
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Add Sitemap
+- [ ] Add RSS Feed
+- [ ] Add SEO Component
+- [ ] Add Dynamic Site Metadata
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Deploy
+## ☁ Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Jfelix61/nextjs-starter-blog)
+
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/Jfelix61/nextjs-starter-blog)
