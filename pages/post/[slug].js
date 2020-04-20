@@ -13,7 +13,11 @@ const CodeBlock = ({ language, value }) => {
 };
 
 const MarkdownImage = ({ alt, src }) => (
-  <Image alt={alt} src={require(`../../content/assets/${src}`)} />
+  <Image
+    alt={alt}
+    src={require(`../../content/assets/${src}`)}
+    previewSrc={require(`../../content/assets/${src}?lqip`)}
+  />
 );
 
 export default function Post({ content, frontmatter }) {

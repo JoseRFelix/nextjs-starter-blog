@@ -14,6 +14,7 @@ export default function Bio() {
           },
         }}
         src={require("../content/assets/profile.png")}
+        previewSrc={require("../content/assets/profile.png?lqip")}
         alt="Profile"
       />
       <p className="mb-0 text-sm">

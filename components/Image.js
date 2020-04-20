@@ -3,9 +3,8 @@ import { useState } from "react";
 export default function Image({
   alt,
   src,
+  previewSrc,
   className,
-  imgClassName,
-  previewClassName,
   childProps = {},
   ...rest
 }) {
@@ -29,7 +28,7 @@ export default function Image({
         className={`absolute top-0 left-0 z-10 w-full transition-opacity duration-500 ease-in opacity-100 ${
           childProps.preview && childProps.preview.className
         }`}
-        src={src}
+        src={previewSrc}
         alt={alt}
         style={styles.lqip}
       />
