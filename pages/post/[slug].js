@@ -5,8 +5,9 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-import Layout from "../../components/Layout";
-import Image from "../../components/Image";
+import Layout from "components/Layout";
+import Image from "components/Image";
+import SEO from "components/Seo";
 
 const CodeBlock = ({ language, value }) => {
   return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
@@ -21,9 +22,16 @@ const MarkdownImage = ({ alt, src }) => (
   />
 );
 
-export default function Post({ content, frontmatter }) {
+export default function Post({ post, frontmatter }) {
+  console.log(post);
+
   return (
     <Layout>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.description || post.excerpt}
+      />
+
       <article>
         <header>
           <h1 className="my-0">{frontmatter.title}</h1>
@@ -31,7 +39,7 @@ export default function Post({ content, frontmatter }) {
         </header>
         <ReactMarkdown
           escapeHtml={false}
-          source={content}
+          source={post.content}
           renderers={{ code: CodeBlock, image: MarkdownImage }}
         />
       </article>
@@ -59,7 +67,7 @@ export async function getStaticProps({ params: { slug } }) {
     .readFileSync(path.join("content/posts", slug + ".md"))
     .toString();
 
-  const { data, content } = matter(markdownWithMetadata);
+  const { data, content, excerpt } = matter(markdownWithMetadata);
 
   // Convert post date to format: Month day, Year
   const options = { year: "numeric", month: "long", day: "numeric" };
@@ -72,7 +80,10 @@ export async function getStaticProps({ params: { slug } }) {
 
   return {
     props: {
-      content,
+      post: {
+        content,
+        excerpt,
+      },
       frontmatter,
     },
   };

@@ -1,6 +1,9 @@
 import Image from "./Image";
+import { getSiteMetaData } from "utils/helpers";
 
 export default function Bio() {
+  const { author, social } = getSiteMetaData();
+
   return (
     <div className="flex items-center my-12">
       <Image
@@ -10,9 +13,10 @@ export default function Bio() {
         alt="Profile"
       />
       <p className="mb-0 text-sm">
-        Created by <b>Jose Felix</b> who works building clean user interfaces
-        with React.{" "}
-        <a href="https://twitter.com/Jose_R_Felix">Follow him on twitter</a>
+        Built by <b>{author.name}</b> {author.summary}{" "}
+        <a href={`https://twitter.com/${social.twitter}`}>
+          Follow him on twitter
+        </a>
       </p>
     </div>
   );

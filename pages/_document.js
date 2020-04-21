@@ -1,11 +1,15 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Head, Main, NextScript, Html } from "next/document";
 import { TypographyStyle } from "react-typography";
+
 import typography from "utils/typography";
+import { getSiteMetaData } from "utils/helpers";
 
 export default class MyDocument extends Document {
   render() {
+    const siteMetadata = getSiteMetaData();
+
     return (
-      <html>
+      <Html lang={siteMetadata.language}>
         <Head>
           <TypographyStyle typography={typography} />
         </Head>
@@ -13,7 +17,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

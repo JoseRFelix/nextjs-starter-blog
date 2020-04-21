@@ -8,6 +8,9 @@ Start off your writing journey with this Next.js markdown blog template.
 
 - Streamlined styling experience with [Tailwind.css](https://tailwindcss.com/).
 - Automatic image preview and optimization with [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images).
+- Lazyload images.
+- Absolute imports.
+- SEO friendly.
 - 20+ themes with [Typography.js](https://github.com/cyrilwanner/next-optimized-images).
 - Markdown code highlighting with [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) and [PrismJs](https://prismjs.com/).
 
