@@ -1,13 +1,10 @@
-import { useState } from "react";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 import Layout from "components/Layout";
 import Image from "components/Image";
 import SEO from "components/Seo";
+import { getPostBySlug, getPostsSlugs } from "utils/posts";
 
 const CodeBlock = ({ language, value }) => {
   return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
@@ -23,8 +20,6 @@ const MarkdownImage = ({ alt, src }) => (
 );
 
 export default function Post({ post, frontmatter }) {
-  console.log(post);
-
   return (
     <Layout>
       <SEO
@@ -48,13 +43,7 @@ export default function Post({ post, frontmatter }) {
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync("content/posts");
-
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace(".md", ""),
-    },
-  }));
+  const paths = getPostsSlugs();
 
   return {
     paths,
@@ -63,28 +52,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const markdownWithMetadata = fs
-    .readFileSync(path.join("content/posts", slug + ".md"))
-    .toString();
+  const postData = getPostBySlug(slug);
 
-  const { data, content, excerpt } = matter(markdownWithMetadata);
-
-  // Convert post date to format: Month day, Year
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  const formattedDate = data.date.toLocaleDateString("en", options);
-
-  const frontmatter = {
-    ...data,
-    date: formattedDate,
-  };
-
-  return {
-    props: {
-      post: {
-        content,
-        excerpt,
-      },
-      frontmatter,
-    },
-  };
+  return { props: postData };
 }
