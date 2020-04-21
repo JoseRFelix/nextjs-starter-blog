@@ -41,8 +41,8 @@ You can check out [the Next.js GitHub repository](https://github.com/zeit/next.j
 
 - [ ] Add Sitemap
 - [ ] Add RSS Feed
-- [ ] Add SEO Component
-- [ ] Add Dynamic Site Metadata
+- [x] Add SEO Component
+- [x] Add Dynamic Site Metadata
 
 ## ☁ Deploy
 
