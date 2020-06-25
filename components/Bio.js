@@ -13,9 +13,9 @@ export default function Bio() {
         alt="Profile"
       />
       <p className="mb-0 text-sm">
-        Built by <b>{author.name}</b> {author.summary}{" "}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          Follow him on twitter
+        {author.summary}<br/>{" "}
+        <a href={`https://www.wsgvet.com`} target="_blank">
+          우성짱의 홈페이지
         </a>
       </p>
     </div>

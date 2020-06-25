@@ -9,7 +9,7 @@ export default function Layout({ children }) {
     <h1 className="mb-8">
       <Link href="/">
         <a className="text-6xl font-black text-black no-underline">
-          Next.Js Starter Blog
+          Blog.
         </a>
       </Link>
     </h1>
@@ -17,7 +17,7 @@ export default function Layout({ children }) {
     <h1 className="mb-2">
       <Link href="/">
         <a className="text-2xl font-black text-black no-underline">
-          Next.Js Starter Blog
+          Blog.
         </a>
       </Link>
     </h1>
@@ -28,8 +28,8 @@ export default function Layout({ children }) {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with{" "}
-        <a href="https://nextjs.org/">Next.js</a> &#128293;
+        © {new Date().getFullYear()}, {" "}
+        <a href="https://nextjs.org/" target="_blank">Next.js</a> 로 만들어졌습니다. &#128293;
       </footer>
     </div>
   );

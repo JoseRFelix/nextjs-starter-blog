@@ -1,13 +1,13 @@
 export default {
   siteMetadata: {
-    title: "Next.js Starter Blog",
+    title: "Woosung Next.js Blog",
     author: {
-      name: "Jose Felix",
-      summary: "who works building clean user interfaces with React.",
+      name: "Woosung Choi",
+      summary: "블로그, CMS, 서버 관리, 정적사이트 생성기를 좋아합니다.",
     },
-    description: "A blog created with Next.js and Tailwind.css",
-    siteUrl: "https://nextjs-starter-blog-demo.netlify.app/",
-    language: "en-US",
+    description: "Next js로 만든 스타터 블로그입니다.",
+    siteUrl: "https://nextjs.woosung.vercel.app/",
+    language: "ko-KR",
     social: {
       twitter: "Jose_R_Felix",
     },
