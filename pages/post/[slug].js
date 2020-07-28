@@ -28,11 +28,14 @@ export default function Post({ post, frontmatter }) {
       />
 
       <article>
-        <header>
-          <h1 className="my-0">{frontmatter.title}</h1>
-          <p className="text-xs">{frontmatter.date}</p>
+        <header className="mb-8">
+          <h1 className="text-6xl font-black font-display">
+            {frontmatter.title}
+          </h1>
+          <p className="text-sm">{frontmatter.date}</p>
         </header>
         <ReactMarkdown
+          className="mb-4 prose-sm prose sm:prose lg:prose-lg"
           escapeHtml={false}
           source={post.content}
           renderers={{ code: CodeBlock, image: MarkdownImage }}
