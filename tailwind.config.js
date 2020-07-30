@@ -43,7 +43,7 @@ module.exports = {
     typography: (theme) => ({
       default: {
         css: {
-          color: theme("colors.gray.800"),
+          color: theme("colors.gray.900"),
           blockquote: {
             borderLeftColor: theme("colors.gray.700"),
           },
