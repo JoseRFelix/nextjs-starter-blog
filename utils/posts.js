@@ -2,6 +2,18 @@ import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 
+export function getPostsFolders() {
+  // Get all posts folders located in `content/posts`
+  const postsFolders = fs
+    .readdirSync(`${process.cwd()}/content/posts`)
+    .map((folderName) => ({
+      directory: folderName,
+      filename: `${folderName}.md`,
+    }));
+
+  return postsFolders;
+}
+
 // Get day in format: Month day, Year. e.g. April 19, 2020
 function getFormattedDate(date) {
   const options = { year: "numeric", month: "long", day: "numeric" };
@@ -11,18 +23,17 @@ function getFormattedDate(date) {
 }
 
 export function getSortedPosts() {
-  // Get all posts located in `content/posts`
-  const files = fs.readdirSync(`${process.cwd()}/content/posts`);
+  const postFolders = getPostsFolders();
 
-  const posts = files
-    .map((filename) => {
+  const posts = postFolders
+    .map(({ filename, directory }) => {
       // Get raw content from file
       const markdownWithMetadata = fs
-        .readFileSync(`content/posts/${filename}`)
+        .readFileSync(`content/posts/${directory}/${filename}`)
         .toString();
 
-      // Parse markdown and get frontmatter data.
-      const { data } = matter(markdownWithMetadata);
+      // Parse markdown, get frontmatter data, excerpt and content.
+      const { data, excerpt, content } = matter(markdownWithMetadata);
 
       const frontmatter = {
         ...data,
@@ -35,6 +46,8 @@ export function getSortedPosts() {
       return {
         slug,
         frontmatter,
+        excerpt,
+        content,
       };
     })
     .sort(
@@ -45,9 +58,9 @@ export function getSortedPosts() {
 }
 
 export function getPostsSlugs() {
-  const files = fs.readdirSync("content/posts");
+  const postFolders = getPostsFolders();
 
-  const paths = files.map((filename) => ({
+  const paths = postFolders.map(({ filename }) => ({
     params: {
       slug: filename.replace(".md", ""),
     },
@@ -57,18 +70,14 @@ export function getPostsSlugs() {
 }
 
 export function getPostBySlug(slug) {
-  // Get raw content for post given a slug
-  const markdownWithMetadata = fs
-    .readFileSync(path.join("content/posts", slug + ".md"))
-    .toString();
+  const posts = getSortedPosts();
 
-  // Parse markdown, and get markdown's frontmatter and content.
-  const { data, content, excerpt } = matter(markdownWithMetadata);
+  const postIndex = posts.findIndex(({ slug: postSlug }) => postSlug === slug);
 
-  const frontmatter = {
-    ...data,
-    date: getFormattedDate(data.date),
-  };
+  const { frontmatter, content, excerpt } = posts[postIndex];
 
-  return { frontmatter, post: { content, excerpt } };
+  const previousPost = posts[postIndex + 1];
+  const nextPost = posts[postIndex - 1];
+
+  return { frontmatter, post: { content, excerpt }, previousPost, nextPost };
 }

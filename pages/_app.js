@@ -1,4 +1,4 @@
-import "styles/tailwind.css";
+import "styles/global.css";
 
 import "typeface-open-sans";
 import "typeface-merriweather";
