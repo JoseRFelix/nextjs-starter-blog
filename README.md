@@ -58,6 +58,7 @@ To learn more about Tailwind CSS, take a look at the following resources:
 - [ ] Add Sitemap
 - [ ] Add RSS Feed
 - [ ] Dark Mode
+- [ ] Add support for WebP images
 - [x] Add SEO Component
 - [x] Add Dynamic Site Metadata
 
