@@ -47,7 +47,7 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
           <Bio className="mt-8 mb-16" />
         </footer>
       </article>
-      <nav className="flex justify-between mb-10">
+      <nav className="flex flex-wrap justify-between mb-10">
         {previousPost ? (
           <Link href={"/post/[slug]"} as={`/post/${previousPost.slug}`}>
             <a className="text-lg font-bold">

@@ -33,7 +33,7 @@ module.exports = {
         "7xl": "4.5rem",
       },
       spacing: {
-        "14": "3.375rem",
+        14: "3.375rem",
       },
     },
     fontFamily: {
@@ -62,4 +62,5 @@ module.exports = {
   },
   variants: {},
   plugins: [require("@tailwindcss/typography")],
+  future: { removeDeprecatedGapUtilities: true },
 };
