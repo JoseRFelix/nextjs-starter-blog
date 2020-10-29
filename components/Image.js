@@ -5,9 +5,9 @@ export default function Image({ alt, src, previewSrc, webpSrc, className }) {
     <img
       className={`lazyload blur-up ${className}`}
       alt={alt}
-      src={previewSrc}
+      src={src}
+      srcset={previewSrc}
       data-srcset={webpSrc}
-      data-src={src}
       type="image/webp"
     />
   );
