@@ -8,7 +8,6 @@ export default function Image({ alt, src, previewSrc, webpSrc, className }) {
       src={src}
       srcset={previewSrc}
       data-srcset={webpSrc}
-      type="image/webp"
     />
   );
 }
