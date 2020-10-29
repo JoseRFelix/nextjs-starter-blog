@@ -11,6 +11,7 @@ export default function Bio({ className }) {
       <Image
         className="flex-shrink-0 mb-0 mr-3 rounded-full w-14 h-14"
         src={require("../content/assets/profile.png")}
+        webpSrc={require("../content/assets/profile.png?webp")}
         previewSrc={require("../content/assets/profile.png?lqip")}
         alt="Profile"
       />
