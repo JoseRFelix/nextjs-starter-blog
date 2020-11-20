@@ -1,26 +1,10 @@
 import Link from "next/link";
 import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 
-import Layout from "components/Layout";
-import Image from "components/Image";
-import SEO from "components/Seo";
-import { getPostBySlug, getPostsSlugs } from "utils/posts";
-import Bio from "components/Bio";
-
-const CodeBlock = ({ language, value }) => {
-  return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
-};
-
-const MarkdownImage = ({ alt, src }) => (
-  <Image
-    alt={alt}
-    src={require(`../../content/assets/${src}`)}
-    webpSrc={require(`../../content/assets/${src}?webp`)}
-    previewSrc={require(`../../content/assets/${src}?lqip`)}
-    className="w-full"
-  />
-);
+import { Layout, Image, SEO, Bio } from "@components/common";
+import { getPostBySlug, getPostsSlugs } from "@utils/posts";
 
 export default function Post({ post, frontmatter, nextPost, previousPost }) {
   return (
@@ -38,7 +22,7 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
           <p className="text-sm">{frontmatter.date}</p>
         </header>
         <ReactMarkdown
-          className="mb-4 prose-sm prose sm:prose lg:prose-lg"
+          className="mb-4 prose lg:prose-lg dark:prose-dark"
           escapeHtml={false}
           source={post.content}
           renderers={{ code: CodeBlock, image: MarkdownImage }}
@@ -48,6 +32,7 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
           <Bio className="mt-8 mb-16" />
         </footer>
       </article>
+
       <nav className="flex flex-wrap justify-between mb-10">
         {previousPost ? (
           <Link href={"/post/[slug]"} as={`/post/${previousPost.slug}`}>
@@ -92,3 +77,21 @@ export async function getStaticProps({ params: { slug } }) {
 
   return { props: postData };
 }
+
+const CodeBlock = ({ language, value }) => {
+  return (
+    <SyntaxHighlighter style={style} language={language}>
+      {value}
+    </SyntaxHighlighter>
+  );
+};
+
+const MarkdownImage = ({ alt, src }) => (
+  <Image
+    alt={alt}
+    src={require(`../../content/assets/${src}`)}
+    webpSrc={require(`../../content/assets/${src}?webp`)}
+    previewSrc={require(`../../content/assets/${src}?lqip`)}
+    className="w-full"
+  />
+);

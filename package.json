@@ -14,22 +14,25 @@
     "imagemin-optipng": "^8.0.0",
     "lazysizes": "^5.2.2",
     "lqip-loader": "^2.2.1",
-    "next": "10.0.0",
-    "next-compose-plugins": "^2.2.0",
+    "next": "10.0.2",
+    "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
-    "postcss-preset-env": "^6.7.0",
+    "next-themes": "^0.0.10",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-markdown": "^5.0.2",
-    "react-syntax-highlighter": "^15.2.1",
+    "react-markdown": "^5.0.3",
+    "react-syntax-highlighter": "^15.3.0",
+    "react-toggle-dark-mode": "^1.0.3",
     "typeface-merriweather": "^1.1.13",
     "typeface-open-sans": "^1.1.13",
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.2.0",
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.0.2",
     "gray-matter": "^4.0.2",
-    "tailwindcss": "^1.9.6"
+    "postcss": "^8.1.8",
+    "tailwindcss": "^2.0.1"
   },
   "license": "MIT",
   "repository": {
