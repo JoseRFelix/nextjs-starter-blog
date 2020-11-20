@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import "./base.css";
+
+  a {
+    @apply text-neon-orange dark:text-yellow-500;
+  }
+}
+
+@layer components {
+  @import "./components.css";
+}

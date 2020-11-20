@@ -1,6 +1,5 @@
 import matter from "gray-matter";
 import fs from "fs";
-import path from "path";
 
 export function getPostsFolders() {
   // Get all posts folders located in `content/posts`

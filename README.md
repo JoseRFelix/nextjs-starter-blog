@@ -13,6 +13,8 @@ Start off your writing journey with this Next.js markdown blog template.
 - Absolute imports.
 - SEO friendly.
 - Markdown code highlighting with [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) and [PrismJs](https://prismjs.com/).
+- Dark Mode
+- WebP image support
 
 ## 🚀 Getting Started
 
@@ -57,7 +59,7 @@ To learn more about Tailwind CSS, take a look at the following resources:
 
 - [ ] Add Sitemap
 - [ ] Add RSS Feed
-- [ ] Dark Mode
+- [x] Dark Mode
 - [x] Add support for WebP images
 - [x] Add SEO Component
 - [x] Add Dynamic Site Metadata

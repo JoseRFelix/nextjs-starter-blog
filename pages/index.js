@@ -1,9 +1,7 @@
 import Link from "next/link";
 
-import Layout from "components/Layout";
-import Bio from "components/Bio";
-import SEO from "components/Seo";
-import { getSortedPosts } from "utils/posts";
+import { Layout, Bio, SEO } from "@components/common";
+import { getSortedPosts } from "@utils/posts";
 
 export default function Home({ posts }) {
   return (
@@ -15,7 +13,7 @@ export default function Home({ posts }) {
           <header className="mb-2">
             <h3 className="mb-2">
               <Link href={"/post/[slug]"} as={`/post/${slug}`}>
-                <a className="text-4xl font-bold text-orange-600 font-display">
+                <a className="text-4xl font-bold text-yellow-600 font-display">
                   {title}
                 </a>
               </Link>
