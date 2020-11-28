@@ -22,7 +22,7 @@ export function Layout({ children }) {
 }
 
 const Header = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
   const { pathname } = useRouter();
   const [mounted, setMounted] = useState(false);
 
@@ -36,9 +36,7 @@ const Header = () => {
   };
 
   const isRoot = pathname === "/";
-  const isDarkMode = theme === "dark";
-
-  if (!mounted) return null;
+  const isDarkMode = theme === "dark" || systemTheme === "dark";
 
   return (
     <header
@@ -50,11 +48,13 @@ const Header = () => {
       <div className={"max-w-md"}>
         {isRoot ? <LargeTitle /> : <SmallTitle />}
       </div>
-      <DarkModeSwitch
-        checked={isDarkMode}
-        onChange={toggleDarkMode}
-        className={isRoot ? 28 : 24}
-      />
+      {mounted && (
+        <DarkModeSwitch
+          checked={isDarkMode}
+          onChange={toggleDarkMode}
+          className={isRoot ? 28 : 24}
+        />
+      )}
     </header>
   );
 };
