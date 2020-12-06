@@ -22,7 +22,7 @@ export function Layout({ children }) {
 }
 
 const Header = () => {
-  const { theme, setTheme, systemTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const { pathname } = useRouter();
   const [mounted, setMounted] = useState(false);
 
@@ -36,7 +36,7 @@ const Header = () => {
   };
 
   const isRoot = pathname === "/";
-  const isDarkMode = theme === "dark" || systemTheme === "dark";
+  const isDarkMode = resolvedTheme === "dark";
 
   return (
     <header
