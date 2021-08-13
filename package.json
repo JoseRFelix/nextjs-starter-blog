@@ -14,7 +14,7 @@
     "imagemin-optipng": "^8.0.0",
     "lazysizes": "^5.3.1",
     "lqip-loader": "^2.2.1",
-    "next": "10.0.9",
+    "next": "11.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
     "next-themes": "^0.0.14",
