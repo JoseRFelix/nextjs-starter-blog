@@ -23,16 +23,11 @@ const defaultSerif = [
 ];
 
 module.exports = {
-  purge: {
-    mode: "all",
-    content: [
-      "./components/**/*.{js,ts,jsx,tsx,css}",
-      "./pages/**/*.{js,ts,jsx,tsx}",
-    ],
-    options: {
-      safelist: { deep: [/blur$/] },
-    },
-  },
+  mode: "jit",
+  purge: [
+    "./components/**/*.{js,ts,jsx,tsx,css}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: "class",
   theme: {
     extend: {
