@@ -3,6 +3,9 @@
   "version": "0.2.0",
   "description": "A Next.js template for a blog website.",
   "private": true,
+  "engines": {
+    "node": "14"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
