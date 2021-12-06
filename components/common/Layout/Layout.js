@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+
+import RSSIcon from "@assets/svg/rss.svg";
 
 export function Layout({ children }) {
   return (
@@ -49,11 +52,14 @@ const Header = () => {
         {isRoot ? <LargeTitle /> : <SmallTitle />}
       </div>
       {mounted && (
-        <DarkModeSwitch
-          checked={isDarkMode}
-          onChange={toggleDarkMode}
-          className={isRoot ? 28 : 24}
-        />
+        <div className="flex space-x-4">
+          <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} />
+          <Link href="/rss.xml" passHref>
+            <a target="__blank" rel="noreferrer noopener">
+              <RSSIcon className={isDarkMode ? "text-white" : "text-black"} />
+            </a>
+          </Link>
+        </div>
       )}
     </header>
   );

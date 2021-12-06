@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Next.js Starter Blog</title>
-        <link>https://nextjs-starter-blog-demo.netlify.app/</link>
+        <link>https://nextjs-starter-blog-new-demo.vercel.app/</link>
         <description>undefined</description>
-        <lastBuildDate>Mon, 06 Dec 2021 19:06:22 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 Dec 2021 19:32:09 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2021 Jose Felix</copyright>
         <item>
             <title><![CDATA[Long Post]]></title>
-            <link>https://nextjs-starter-blog-demo.netlify.app//posts/long-post</link>
+            <link>https://nextjs-starter-blog-new-demo.vercel.app/posts/long-post</link>
             <guid>long-post</guid>
             <pubDate>Tue, 28 Jul 2020 04:00:00 GMT</pubDate>
             <description><![CDATA[Who doesn't like a long post showcasing the different headings?]]></description>
@@ -121,7 +121,7 @@ for their projects again and again.]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Coding Post]]></title>
-            <link>https://nextjs-starter-blog-demo.netlify.app//posts/coding-post</link>
+            <link>https://nextjs-starter-blog-new-demo.vercel.app/posts/coding-post</link>
             <guid>coding-post</guid>
             <pubDate>Sun, 19 Apr 2020 04:00:00 GMT</pubDate>
             <description><![CDATA[Coding is such a blissful activity.]]></description>
@@ -137,7 +137,7 @@ export default CoolComponent;
         </item>
         <item>
             <title><![CDATA[Second post]]></title>
-            <link>https://nextjs-starter-blog-demo.netlify.app//posts/second-post</link>
+            <link>https://nextjs-starter-blog-new-demo.vercel.app/posts/second-post</link>
             <guid>second-post</guid>
             <pubDate>Fri, 17 Apr 2020 04:00:00 GMT</pubDate>
             <description><![CDATA[The second post is the least memorable.]]></description>
@@ -153,7 +153,7 @@ Normal text
         </item>
         <item>
             <title><![CDATA[First post]]></title>
-            <link>https://nextjs-starter-blog-demo.netlify.app//posts/first-post</link>
+            <link>https://nextjs-starter-blog-new-demo.vercel.app/posts/first-post</link>
             <guid>first-post</guid>
             <pubDate>Thu, 16 Apr 2020 04:00:00 GMT</pubDate>
             <description><![CDATA[The first post is the most memorable one.]]></description>

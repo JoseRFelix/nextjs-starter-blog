@@ -31,7 +31,7 @@ export function generateRssPostsFeed() {
         description,
         date: new Date(date),
         id: slug,
-        link: `${siteUrl}/posts/${slug}`,
+        link: `${siteUrl}posts/${slug}`,
         content: content,
       });
     }
