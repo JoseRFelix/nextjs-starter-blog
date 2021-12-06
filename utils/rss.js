@@ -20,7 +20,7 @@ export function generateRssPostsFeed() {
       link: author?.link,
     },
     feedLinks: {
-      rss2: `${siteUrl}/rss.xml`,
+      rss2: `${siteUrl}rss.xml`,
     },
   });
 
