@@ -3,7 +3,8 @@
     "title": "Next.js Starter Blog",
     "author": {
       "name": "Jose Felix",
-      "summary": "who works building clean user interfaces with React."
+      "summary": "who works building clean user interfaces with React.",
+      "link": "https://jfelix.info"
     },
     "description": "A blog created with Next.js and Tailwind.css",
     "siteUrl": "https://nextjs-starter-blog-demo.netlify.app/",
