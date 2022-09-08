@@ -6,7 +6,7 @@ Start off your writing journey with this Next.js markdown blog template.
 
 ## ✏ Features
 
-- Next.js 12! 
+- Next.js 12!
 - RSS Feed
 - Streamlined styling experience with [Tailwind.css](https://tailwindcss.com/).
 - Customizable typographic defaults with [Tailwind Typography](https://github.com/tailwindlabs/tailwindcss-typography)
@@ -59,7 +59,7 @@ To learn more about Tailwind CSS, take a look at the following resources:
 
 ## ☑ Upcoming features
 
-- [ ] Add Sitemap
+- [x] Add Sitemap
 - [x] Add RSS Feed
 - [x] Dark Mode
 - [x] Add support for WebP images
