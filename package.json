@@ -8,13 +8,14 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node ./utils/sitemap.mjs",
     "start": "next start"
   },
   "dependencies": {
     "@svgr/webpack": "^6.1.1",
     "clsx": "^1.1.1",
     "feed": "^4.2.2",
+    "globby": "^13.1.2",
     "next": "12.0.7",
     "next-compose-plugins": "^2.2.1",
     "next-themes": "^0.0.15",
